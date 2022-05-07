@@ -1,13 +1,15 @@
 import styled from 'styled-components/macro';
-import FastCharge from '../../assets/icons/FastCharge.svg';
-import Input from '../DesignSystem/Input';
-import CarrierSelect from '../DesignSystem/CarrierSelect';
-import Switch from '../DesignSystem/Switch';
-import Line from '../DesignSystem/Line';
-import AmountInput from '../DesignSystem/AmountInput';
-import AmountSuggestions from '../DesignSystem/AmountSuggestions';
-import Button from '../DesignSystem/Button';
-import SwitchItem from '../DesignSystem/SwitchItem';
+import FastCharge from '@assets/icons/FastCharge.svg';
+import {
+  CarrierSelect,
+  Input,
+  Switch,
+  Line,
+  AmountInput,
+  AmountSuggestions,
+  Button,
+  SwitchItem,
+} from '@components/DesignSystem';
 
 const Container = styled.div`
   background: #fff;

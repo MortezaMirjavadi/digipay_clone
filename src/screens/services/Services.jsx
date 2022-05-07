@@ -1,10 +1,10 @@
 import {useNavigate} from 'react-router-dom';
 import styled from 'styled-components/macro';
-import Charge from '../../assets/icons/charge.png';
-import InternetPackage from '../../assets/icons/InternetPackage.png';
-import BillPay from '../../assets/icons/BillPay.png';
-import AghsatiService from '../../assets/icons/AghsatiService.png';
-import RoadTolls from '../../assets/icons/RoadTolls.png';
+import Charge from '@assets/icons/charge.png';
+import InternetPackage from '@assets/icons/InternetPackage.png';
+import BillPay from '@assets/icons/BillPay.png';
+import AghsatiService from '@assets/icons/AghsatiService.png';
+import RoadTolls from '@assets/icons/RoadTolls.png';
 
 const Container = styled.div`
   margin: 20px 0 0;
@@ -78,7 +78,7 @@ export default function Services() {
             </HomeServiceIcon>
             <Label>خرید شارژ</Label>
           </ItemGrid>
-          <ItemGrid>
+          <ItemGrid onClick={() => gotoPath('/services/internet')}>
             <HomeServiceIcon>
               <img src={InternetPackage} width={44} height={44} alt="charge" />
             </HomeServiceIcon>

@@ -55,7 +55,7 @@ function Button({label, size, disabled, onClick}) {
   return (
     <Container>
       <Btn disabled={disabled} onClick={onClick} size={size}>
-        <Icon src={UserIcon} />
+        {/* <Icon src={UserIcon} /> */}
         <Label>{label}</Label>
       </Btn>
     </Container>

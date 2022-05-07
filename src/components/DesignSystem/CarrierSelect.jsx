@@ -1,8 +1,8 @@
 import {useState} from 'react';
 import styled from 'styled-components/macro';
-import MCI from '../../assets/icons/mci.png';
-import MTN from '../../assets/icons/mtn.png';
-import RIGHTEL from '../../assets/icons/rightel.png';
+import MCI from '@assets/icons/mci.png';
+import MTN from '@assets/icons/mtn.png';
+import RIGHTEL from '@assets/icons/rightel.png';
 
 const CarrierSelectWrap = styled.div`
   display: flex;

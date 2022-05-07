@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
-import DigiPayLogo from '../../assets/icons/digipaylogo.png';
+import DigiPayLogo from '@assets/icons/digipaylogo.png';
 import CardActions from './CardActions';
-import CardBackground from '../../assets/icons/cardBackground.png';
+import CardBackground from '@assets/icons/cardBackground.png';
 
 const Container = styled.div`
   width: 300px;

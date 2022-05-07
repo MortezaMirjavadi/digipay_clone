@@ -108,7 +108,7 @@ export default function AppBar() {
       {title.length > 0 && (
         <BreadCrumb>
           <ReturnIcon onClick={goBack} />
-          <BreadCrumbItem>خرید شارژ</BreadCrumbItem>
+          <BreadCrumbItem>{title}</BreadCrumbItem>
         </BreadCrumb>
       )}
     </AppBarContainer>

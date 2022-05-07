@@ -1,8 +1,8 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import styled from 'styled-components';
 import HomeCard from '@components/HomeCard/HomeCard';
-import Services from '@components/Services/Services';
-import Charge from '@components/Services/Charge';
+import Services from '../services/Services';
+import Charge from '../services/Charge';
 
 const Container = styled.div`
   display: flex;

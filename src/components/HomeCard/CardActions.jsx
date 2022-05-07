@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import IncAmount from '../../assets/icons/inc-amount.png';
-import DecAmount from '../../assets/icons/dec-amount.png';
+import IncAmount from '@assets/icons/inc-amount.png';
+import DecAmount from '@assets/icons/dec-amount.png';
 
 const Container = styled.div`
   display: inline-flex;

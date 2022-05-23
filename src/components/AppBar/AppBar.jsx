@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import {useNavigate, useLocation} from 'react-router-dom';
 import styled from 'styled-components/macro';
-import Logo from '../../assets/icons/digipay-log.svg';
-import Exit from '../../assets/icons/header-exit-blue.svg';
-import Transaction from '../../assets/icons/transaction-blue.svg';
+import Logo from '@assets/icons/digipay-log.svg';
+import Exit from '@assets/icons/header-exit-blue.svg';
+import Transaction from '@assets/icons/transaction-blue.svg';
 import Button from '../DesignSystem/Button';
-import ArrowIcon from '../../assets/icons/arrow.svg';
-import BackBlue from '../../assets/icons/back-blue.svg';
+import ArrowIcon from '@assets/icons/arrow.svg';
+import BackBlue from '@assets/icons/back-blue.svg';
 import routes from '@routes';
 
 const AppBarContainer = styled.div`
@@ -18,7 +18,7 @@ const AppBarContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  margin-bottom: 48px;
+  margin-bottom: 10px;
   position: relative;
   min-height: 73px;
 `;

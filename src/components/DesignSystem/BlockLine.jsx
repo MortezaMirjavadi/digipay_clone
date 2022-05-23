@@ -1,21 +1,29 @@
 import styled from 'styled-components/macro';
 
+const ComponentName = 'BlockLine';
+
 const Container = styled.div`
   display: block;
   margin: 24px 0;
 `;
 const Block = styled.div`
-  height: 6px;
+  height: ${props => props.height + 'px'};
   width: 100%;
-  background-color: #f2f5f8;
+  background-color: ${props => props.color};
 `;
 
-const BlockLine = () => {
+const BlockLine = ({height, color}) => {
   return (
     <Container>
-      <Block />
+      <Block height={height} color={color} />
     </Container>
   );
+};
+
+BlockLine.displayName = ComponentName;
+BlockLine.defaultProps = {
+  height: 6,
+  color: '#f2f5f8',
 };
 
 export default BlockLine;

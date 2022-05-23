@@ -3,6 +3,7 @@ import {lazy} from 'react';
 const Home = lazy(() => import('@screens/home/Home'));
 const Charge = lazy(() => import('@screens/services/Charge'));
 const Internet = lazy(() => import('@screens/services/Internet'));
+const InternetPackage = lazy(() => import('@screens/services/InternetPackage'));
 
 const routes = [
   {
@@ -12,14 +13,20 @@ const routes = [
   },
   {
     key: 2,
-    path: '/services/charge',
+    path: '/service/charge',
     element: Charge,
     title: 'خرید شارژ',
   },
   {
     key: 3,
-    path: '/services/internet',
+    path: '/service/internet',
     element: Internet,
+    title: 'بسته اینترنت',
+  },
+  {
+    key: 4,
+    path: '/service/internet/package',
+    element: InternetPackage,
     title: 'بسته اینترنت',
   },
 ];

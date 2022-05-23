@@ -1,3 +1,4 @@
+import {useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import styled from 'styled-components/macro';
 import Charge from '@assets/icons/charge.png';
@@ -5,6 +6,7 @@ import InternetPackage from '@assets/icons/InternetPackage.png';
 import BillPay from '@assets/icons/BillPay.png';
 import AghsatiService from '@assets/icons/AghsatiService.png';
 import RoadTolls from '@assets/icons/RoadTolls.png';
+import Traffic from '@assets/icons/traffic.png';
 
 const Container = styled.div`
   margin: 20px 0 0;
@@ -51,6 +53,13 @@ const HomeServiceIcon = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  ${({disabled}) =>
+    disabled &&
+    `
+    background-color: rgb(255, 255, 255);
+    color: rgb(178, 178, 178);
+    border-color: rgb(230, 230, 230);
+  `}
 `;
 const Label = styled.span`
   display: inline-block;
@@ -67,18 +76,22 @@ export default function Services() {
     navigate(path);
   }
 
+  // useEffect(() => {
+  //   document.title = 'لیست سرویس ها';
+  // }, []);
+
   return (
     <Container>
       <Header>خدمات دیجی پی</Header>
       <ServiceGridContainer>
         <IconGrid>
-          <ItemGrid onClick={() => gotoPath('/services/charge')}>
+          <ItemGrid onClick={() => gotoPath('/service/charge')}>
             <HomeServiceIcon>
               <img src={Charge} width={44} height={57} alt="charge" />
             </HomeServiceIcon>
             <Label>خرید شارژ</Label>
           </ItemGrid>
-          <ItemGrid onClick={() => gotoPath('/services/internet')}>
+          <ItemGrid onClick={() => gotoPath('/service/internet')}>
             <HomeServiceIcon>
               <img src={InternetPackage} width={44} height={44} alt="charge" />
             </HomeServiceIcon>
@@ -101,6 +114,12 @@ export default function Services() {
               <img src={RoadTolls} width={44} height={44} alt="charge" />
             </HomeServiceIcon>
             <Label>عوارض جاده‌ای</Label>
+          </ItemGrid>
+          <ItemGrid>
+            <HomeServiceIcon disabled={true}>
+              <img src={Traffic} width={44} height={44} alt="charge" />
+            </HomeServiceIcon>
+            <Label>استعلام جریمه</Label>
           </ItemGrid>
         </IconGrid>
       </ServiceGridContainer>

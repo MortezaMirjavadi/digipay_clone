@@ -1,6 +1,6 @@
 import {createElement, Suspense} from 'react';
 import {Routes, Route} from 'react-router-dom';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import routes from '@routes';
 
 const Container = styled.div`

@@ -13,7 +13,8 @@
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.5",
-    "use-subscription": "^1.7.0"
+    "use-subscription": "^1.7.0",
+    "zustand": "^4.0.0-rc.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.8",

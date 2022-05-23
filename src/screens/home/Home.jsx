@@ -1,5 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import HomeCard from '@components/HomeCard/HomeCard';
 import Services from '../services/Services';
 import Charge from '../services/Charge';

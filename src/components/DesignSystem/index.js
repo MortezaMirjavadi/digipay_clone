@@ -8,6 +8,7 @@ import Line from './Line';
 import AmountInput from './AmountInput';
 import AmountSuggestions from './AmountSuggestions';
 import SwitchItem from './SwitchItem';
+import SimpleMasonry from './SimpleMasonry/SimpleMasonry';
 
 export {
   BlockLine,
@@ -20,4 +21,5 @@ export {
   AmountInput,
   AmountSuggestions,
   SwitchItem,
+  SimpleMasonry,
 };

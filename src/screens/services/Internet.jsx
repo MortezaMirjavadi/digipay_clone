@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import {useNavigate} from 'react-router-dom';
 import WarningIcon from '@assets/icons/warning-icon.svg';
 import {
   SimcardSelector,
@@ -62,6 +63,12 @@ const simcards = [
 ];
 
 const Internet = () => {
+  const navigate = useNavigate();
+
+  function gotoPath(path) {
+    navigate(path);
+  }
+
   return (
     <Section>
       <Container>
@@ -82,7 +89,11 @@ const Internet = () => {
         />
         <ButtonContainer>
           <ButtonInnerContainer>
-            <Button label="ادامه" size="large" />
+            <Button
+              label="ادامه"
+              size="large"
+              onClick={() => gotoPath('/service/internet/package')}
+            />
           </ButtonInnerContainer>
         </ButtonContainer>
       </Container>

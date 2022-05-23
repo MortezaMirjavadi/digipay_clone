@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import IncAmount from '@assets/icons/inc-amount.png';
 import DecAmount from '@assets/icons/dec-amount.png';
 

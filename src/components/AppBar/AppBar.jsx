@@ -18,7 +18,7 @@ const AppBarContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 48px;
   position: relative;
   min-height: 73px;
 `;

@@ -100,8 +100,8 @@ export default function AppBar() {
   return (
     <AppBarContainer>
       <Actions>
-        {/* <TransactionItem /> */}
-        <Button label="ورود به حساب کاربری" size="medium" />
+        <TransactionItem onClick={() => navigate('/transactions')} />
+        {/* <Button label="ورود به حساب کاربری" size="medium" /> */}
         <ExitItem />
       </Actions>
       <DisplayLogo onClick={gotoRoot} />

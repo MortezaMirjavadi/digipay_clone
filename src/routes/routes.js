@@ -4,6 +4,7 @@ const Home = lazy(() => import('@screens/home/Home'));
 const Charge = lazy(() => import('@screens/services/Charge'));
 const Internet = lazy(() => import('@screens/services/Internet'));
 const InternetPackage = lazy(() => import('@screens/services/InternetPackage'));
+const Transactions = lazy(() => import('@screens/transactions/Transactions'));
 
 const routes = [
   {
@@ -28,6 +29,12 @@ const routes = [
     path: '/service/internet/package',
     element: InternetPackage,
     title: 'بسته اینترنت',
+  },
+  {
+    key: 5,
+    path: '/transactions',
+    element: Transactions,
+    title: 'تراکنش ها',
   },
 ];
 

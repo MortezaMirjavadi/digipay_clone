@@ -1,3 +1,4 @@
+import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import styled from 'styled-components';
 import AppBar from '../AppBar/AppBar';
@@ -12,7 +13,7 @@ const LayoutContainer = styled.div`
   flex-grow: 1;
 `;
 
-export default function Layout(props) {
+export default function Layout() {
   const navigate = useNavigate();
   return (
     <LayoutContainer>

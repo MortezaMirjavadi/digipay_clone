@@ -1,12 +1,17 @@
+import React from 'react';
 import {useState, forwardRef} from 'react';
 import styled from 'styled-components/macro';
 import {numberWithCommas, numberWithoutCommas} from '../../utils/utils';
+
+interface StyleProps {
+  type: string | undefined
+}
 
 const InputContainer = styled.div`
   margin: 22px;
   display: block;
 `;
-const Label = styled.div`
+const Label = styled.div<StyleProps>`
   height: 56px;
   border-radius: 16px;
   border: 1px solid ${props => (props.type === 'error' ? '#ff2638' : '#191919')};
@@ -48,7 +53,7 @@ const Input = styled.input`
   direction: ltr;
   box-shadow: none;
 `;
-const Hint = styled.div`
+const Hint = styled.div<StyleProps>`
   color: ${props => (props.type === 'hint' ? '#0040ff' : '#ff2638')};
   font-size: 0.8571428571rem;
   line-height: 1.6666666667em;
@@ -60,7 +65,7 @@ const AmountInput = forwardRef((props, ref) => {
   const [width, setWidth] = useState(88);
   const [error, setError] = useState('');
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const raw = numberWithoutCommas(e.target.value);
     const number = Number(numberWithoutCommas(e.target.value));
     const temp = numberWithCommas(numberWithoutCommas(e.target.value));

@@ -1,9 +1,9 @@
 import styled from 'styled-components/macro';
-import IncAmount from '@assets/icons/inc-amount.png';
-import DecAmount from '@assets/icons/dec-amount.png';
+import IncAmount from '../../assets/icons/inc-amount.png';
+import DecAmount from '../../assets/icons/dec-amount.png';
+import React from 'react';
 
 const Container = styled.div`
-  display: inline-flex;
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@ const Action = styled.div`
 `;
 const ImageIcon = styled.img`
   width: 24px;
-  height: 24px
+  height: 24px;
   src: ${props => props.src};
   margin-left: 5px;
 `;

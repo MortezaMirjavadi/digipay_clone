@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components/macro';
 
 const ModalContainer = styled.div`
@@ -13,6 +14,6 @@ const ModalContainer = styled.div`
   align-items: center;
 `;
 
-export default function Modal(props) {
-  return <ModalContainer></ModalContainer>;
+export default function Modal() {
+  return <ModalContainer/>;
 }

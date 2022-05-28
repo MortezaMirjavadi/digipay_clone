@@ -1,7 +1,11 @@
+import React from 'react';
 import {useState, forwardRef} from 'react';
 import styled from 'styled-components/macro';
 
-const Container = styled.div`
+interface StyleProps {
+  isChecked: boolean
+}
+const Container = styled.div<StyleProps>`
   font-size: 8px;
   width: 5em;
   height: 3em;
@@ -12,7 +16,7 @@ const Container = styled.div`
   cursor: pointer;
   transition: background-color 0.2s;
 `;
-const Circle = styled.div`
+const Circle = styled.div<StyleProps>`
   margin-right: ${props => (props.isChecked && '2em') || 0};
   width: 2em;
   height: 2em;

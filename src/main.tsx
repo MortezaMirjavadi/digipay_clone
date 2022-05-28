@@ -4,7 +4,10 @@ import {BrowserRouter} from 'react-router-dom';
 import App from './App';
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const el = document.getElementById('root')
+if (el === null) throw new Error('Root container missing in index.html')
+
+ReactDOM.createRoot(el).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />

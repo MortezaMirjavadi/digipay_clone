@@ -1,5 +1,11 @@
+import React from 'react';
 import {useState, useRef} from 'react';
 import styled from 'styled-components/macro';
+import {number} from "prop-types";
+
+interface StyleProps {
+  right: number
+}
 
 const MainContainer = styled.div`
   display: flex;
@@ -47,13 +53,12 @@ const ListItem = styled.li`
   font-weight: 500;
   color: ${props => props.color};
 `;
-const Highlight = styled.li`
+const Highlight = styled.li<StyleProps>`
   right: ${props => props.right}px;
   background-color: rgb(240, 245, 255);
   width: 50%;
   height: 30px;
   position: absolute;
-  height: 30px;
   border: 2px solid rgb(0, 64, 255);
   top: 2px;
   left: 0;
@@ -68,12 +73,13 @@ export default function () {
   const [selected, setSelected] = useState(0);
   const ref = useRef(null);
 
-  function handleSelect(id) {
+  function handleSelect(id: number) {
     setSelected(id);
   }
 
-  function handleRight() {
+  function handleRight(): number {
     if (selected === 0) return 0;
+    // @ts-ignore
     return ref.current.offsetWidth + 1;
   }
 
@@ -95,7 +101,7 @@ export default function () {
           >
             دائمی
           </ListItem>
-          <Highlight right={handleRight} />
+          <Highlight right={handleRight()} />
         </UnorderList>
       </SwitchContainer>
     </MainContainer>

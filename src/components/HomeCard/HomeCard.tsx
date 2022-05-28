@@ -2,6 +2,7 @@ import styled from 'styled-components/macro';
 import DigiPayLogo from '@assets/icons/digipaylogo.png';
 import CardActions from './CardActions';
 import CardBackground from '@assets/icons/cardBackground.png';
+import React from 'react';
 
 const Container = styled.div`
   width: 300px;
@@ -10,7 +11,7 @@ const Container = styled.div`
 `;
 const HomeCardContainer = styled.div`
   width: 100%;
-  background: url(${CardBackground}) 0px 0px / 100% 100% no-repeat
+  background: url(${CardBackground}) 0 0 / 100% 100% no-repeat
     rgb(0, 64, 255);
   ${'' /* background: 0px 0px / 100% 100% no-repeat rgb(0, 64, 255); */}
   color: #fff;

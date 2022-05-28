@@ -1,6 +1,11 @@
+import React from 'react';
 import {useState} from 'react';
 import styled from 'styled-components/macro';
 import {numberWithCommas} from '../../utils/utils';
+
+interface StyleProps {
+  selected: boolean
+}
 
 const Container = styled.div`
   margin: 20px;
@@ -17,7 +22,7 @@ const SuggestionWrapper = styled.div`
   flex: 0 1 33.33%;
   padding: 0 6px;
 `;
-const Suggest = styled.div`
+const Suggest = styled.div<StyleProps>`
   box-shadow: ${props =>
     props.selected ? '0 0 0 2px #0040ff' : '0 0 0 1px #666'};
   background-color: ${props => props.selected && '#f0f5ff'};
@@ -48,7 +53,7 @@ export default function () {
     })),
   );
 
-  function handleClick(id) {
+  function handleClick(id: number) {
     const _suggestions = [...suggestions];
     _suggestions.forEach(suggestion => {
       suggestion.selected = suggestion.id === id;

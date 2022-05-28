@@ -1,6 +1,20 @@
 import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components/macro';
 import UserIcon from '../../assets/icons/user.svg';
+
+interface Props {
+  label: string,
+  size: keyof typeof Size,
+  disabled: boolean,
+  onClick: React.MouseEventHandler<HTMLButtonElement>
+}
+
+interface StyleProps {
+  label?: string,
+  size: keyof typeof Size,
+  disabled: boolean,
+}
 
 const Size = {
   small: '24px',
@@ -13,7 +27,7 @@ const Container = styled.div`
   display: flex;
   flex-grow: 1;
 `;
-const Btn = styled.button`
+const Btn = styled.button<StyleProps>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,13 +35,12 @@ const Btn = styled.button`
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   background: transparent;
   color: #6e798d;
-  border-color: #6e798d;
   height: ${props => Size[props.size] || Size.large};
   padding: 0 12px;
   width: 100%;
   font-size: 1rem;
   font-weight: 400;
-  border: 1px solid;
+  border: 1px solid #6e798d;
   ${'' /* border: 1px solid #0040ff; */}
   ${'' /* background: #0040ff; */}
   ${'' /* color: #fff; */}
@@ -51,7 +64,7 @@ const Label = styled.span`
   font-size: 1rem;
 `;
 
-function Button({label, size, disabled, onClick}) {
+function Button({label, size, disabled, onClick}: Props) {
   return (
     <Container>
       <Btn disabled={disabled} onClick={onClick} size={size}>

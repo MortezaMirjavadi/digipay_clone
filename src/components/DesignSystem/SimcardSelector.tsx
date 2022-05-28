@@ -3,6 +3,16 @@ import styled from 'styled-components/macro';
 import SimcardSelectedIcon from '@assets/icons/sim-card-selected.svg';
 import SimcardIcon from '@assets/icons/sim-card.svg';
 import SimcardChecked from '@assets/icons/sim-card-checked.svg';
+import React from 'react';
+
+interface Props {
+    description: string,
+    simcards:  { id: number, title: string }[]
+}
+
+interface StyleProps {
+    isSelected: boolean
+}
 
 const Container = styled.div`
   display: block;
@@ -26,7 +36,7 @@ const Simcard = styled.div`
   display: block;
   height: 64px;
 `;
-const SimcardItem = styled.div`
+const SimcardItem = styled.div<StyleProps>`
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -42,7 +52,7 @@ const SimcardItem = styled.div`
   cursor: pointer;
   text-align: right;
 `;
-const CheckboxCircle = styled.span`
+const CheckboxCircle = styled.span<StyleProps>`
   background: ${props =>
     props.isSelected
       ? `url(${SimcardChecked}) no-repeat 0 0/100% 100%`
@@ -57,10 +67,10 @@ const Title = styled.span`
   font-size: 0.8571428571rem;
 `;
 
-const SimcardSelector = ({description, simcards}) => {
+const SimcardSelector = ({description, simcards}: Props) => {
   const [selectedSimcard, setSelectedSimcard] = useState(1);
 
-  function handleSelectSimcard(id) {
+  function handleSelectSimcard(id: number) {
     setSelectedSimcard(id);
   }
 

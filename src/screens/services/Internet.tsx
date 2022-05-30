@@ -7,7 +7,8 @@ import {
   CarrierSelect,
   Input,
   Button,
-} from '@components/DesignSystem';
+} from '../../components/DesignSystem';
+import React from 'react';
 
 const Section = styled.div`
   background: #fff;
@@ -34,7 +35,7 @@ const Warning = styled.span`
   display: inline-block;
   vertical-align: middle;
   background: url(${WarningIcon}) no-repeat 0 0/100%;
-  marginbottom: 20px;
+  margin-bottom: 20px;
 `;
 const Paragraph = styled.p`
   color: #666;
@@ -65,7 +66,7 @@ const simcards = [
 const Internet = () => {
   const navigate = useNavigate();
 
-  function gotoPath(path) {
+  function gotoPath(path: string) {
     navigate(path);
   }
 
@@ -92,6 +93,7 @@ const Internet = () => {
             <Button
               label="ادامه"
               size="large"
+              disabled={false}
               onClick={() => gotoPath('/service/internet/package')}
             />
           </ButtonInnerContainer>

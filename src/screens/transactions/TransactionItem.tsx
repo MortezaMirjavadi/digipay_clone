@@ -1,7 +1,12 @@
 import styled from 'styled-components/macro';
 import MCI from '@assets/icons/mci.png';
+import React from 'react';
 
-const TransactionItemContainer = styled.div`
+interface Props {
+  isLastItem: boolean
+}
+
+const TransactionItemContainer = styled.div<Props>`
   display: block;
   position: relative;
   &:before {
@@ -49,11 +54,11 @@ const TransactionAmountSign = styled.span`
   font-weight: 400;
   margin-right: 4px;
 `;
-const TransactionItem = ({isLastItem}) => {
+const TransactionItem = ({isLastItem}: Props) => {
   return (
     <TransactionItemContainer isLastItem={isLastItem}>
       <TransactionItemContent>
-        <TransactionIcon></TransactionIcon>
+        <TransactionIcon/>
         <TransactionBody>
           <TransactionBodyMainDesc>قبض همراه اول</TransactionBodyMainDesc>
           <TransactionBodySubDesc>پرداخت موفق</TransactionBodySubDesc>

@@ -1113,7 +1113,7 @@ typescript@^4.7.2:
 
 use-subscription@^1.7.0:
   version "1.7.0"
-  resolved "https://registry.npmjs.org/use-subscription/-/use-subscription-1.7.0.tgz#c7505263315deac9fd2581cdf4ab1e3ff2585d0f"
+  resolved "https://registry.yarnpkg.com/use-subscription/-/use-subscription-1.7.0.tgz#c7505263315deac9fd2581cdf4ab1e3ff2585d0f"
   integrity sha512-87x6MjiIVE/BWqtxfiRvM6jfvGudN+UeVOnWi7qKYp2c0YJn5+Z5Jt0kZw6Tt+8hs7kw/BWo2WBhizJSAZsQJA==
   dependencies:
     use-sync-external-store "^1.1.0"

@@ -5,7 +5,8 @@ import {
   Input,
   BlockLine,
   SimpleMasonry,
-} from '@components/DesignSystem';
+} from '../../components/DesignSystem';
+import React from 'react';
 
 const Container = styled.div`
   width: 100%;
@@ -25,7 +26,7 @@ const Warning = styled.span`
   display: inline-block;
   vertical-align: middle;
   background: url(${WarningIcon}) no-repeat 0 0/100%;
-  marginbottom: 20px;
+  margin-bottom: 20px;
   margin-left: 10px;
 `;
 const Filter = styled.div`
@@ -57,13 +58,13 @@ const InternetPackage = () => {
         <NumberField>
           <Input />
         </NumberField>
-        <SelectField></SelectField>
+        <SelectField/>
         <ButtonContainer>
-          <Button label="جستجو" size="large"></Button>
+          <Button label="جستجو" size="large" disabled={false} onClick={() => {}}/>
         </ButtonContainer>
       </Filter>
       <BlockLine height={1} color="#e6e6e6" />
-      <SimpleMasonry></SimpleMasonry>
+      <SimpleMasonry/>
     </Container>
   );
 };

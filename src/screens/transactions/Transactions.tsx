@@ -4,6 +4,7 @@ import PaidIcon from '@assets/icons/paid.svg';
 import GeneralDate from '@assets/icons/icon-general-date.svg';
 import GeneralDateHightlight from '@assets/icons/icon-general-date-h.svg';
 import TransactionGroup from './TransactionGroup';
+import React from 'react';
 
 const componentName = 'Transactions';
 
@@ -66,7 +67,7 @@ const TitleIcon = styled.span`
   vertical-align: middle;
   margin-left: 8px;
 `;
-const DesktopCollumn = styled.div`
+const DesktopColumn = styled.div`
   justify-content: space-between;
   display: flex;
   height: 71vh;
@@ -124,19 +125,19 @@ const Transactions = () => {
         <TitleBar>
           <TitleRight>
             <Title>
-              <TitleIcon></TitleIcon>
+              <TitleIcon/>
               پرداخت
             </Title>
           </TitleRight>
           <TitleLeft>
             <Title>
-              <TitleIcon></TitleIcon>
+              <TitleIcon/>
               دریافت
             </Title>
           </TitleLeft>
           <DateIcon />
         </TitleBar>
-        <DesktopCollumn>
+        <DesktopColumn>
           <Body>
             <TransactionList>
               <ScrollArea>
@@ -162,7 +163,7 @@ const Transactions = () => {
               </ScrollArea>
             </TransactionList>
           </Body>
-        </DesktopCollumn>
+        </DesktopColumn>
       </Section>
     </Container>
   );

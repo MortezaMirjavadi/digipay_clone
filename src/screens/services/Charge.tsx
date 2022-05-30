@@ -9,7 +9,8 @@ import {
   AmountSuggestions,
   Button,
   SwitchItem,
-} from '@components/DesignSystem';
+} from '../../components/DesignSystem';
+import React from 'react';
 
 const Container = styled.div`
   background: #fff;
@@ -101,7 +102,7 @@ export default function Charge() {
       </SwitchBox>
       <Footer>
         <PayWithWalletButton>
-          <Button label="پرداخت آنلاین" onClick={() => {}} />
+          <Button label="پرداخت آنلاین" disabled={false} onClick={() => {}} />
         </PayWithWalletButton>
         <PayButton>
           <Button

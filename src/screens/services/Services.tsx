@@ -7,6 +7,11 @@ import BillPay from '@assets/icons/BillPay.png';
 import AghsatiService from '@assets/icons/AghsatiService.png';
 import RoadTolls from '@assets/icons/RoadTolls.png';
 import Traffic from '@assets/icons/traffic.png';
+import React from 'react';
+
+interface StyleProps {
+  disabled?: boolean
+}
 
 const Container = styled.div`
   margin: 20px 0 0;
@@ -36,17 +41,15 @@ const ItemGrid = styled.div`
   display: inline-block;
   text-align: center;
 `;
-const HomeServiceIcon = styled.div`
+const HomeServiceIcon = styled.div<StyleProps>`
   background-color: rgb(255, 255, 255);
   color: rgb(102, 102, 102);
-  border-color: rgb(230, 230, 230);
   font-size: 80px;
   width: 1em;
   height: 1em;
   margin: 0 auto;
   border: 1px solid #d3dbe1;
   border-radius: 0.3em;
-  background: #fff;
   position: relative;
   cursor: pointer;
   display: flex;
@@ -72,7 +75,7 @@ const Label = styled.span`
 export default function Services() {
   const navigate = useNavigate();
 
-  function gotoPath(path) {
+  function gotoPath(path: string) {
     navigate(path);
   }
 

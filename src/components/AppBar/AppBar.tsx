@@ -6,7 +6,7 @@ import Exit from '../../assets/icons/header-exit-blue.svg';
 import Transaction from '../../assets/icons/transaction-blue.svg';
 import ArrowIcon from '../../assets/icons/arrow.svg';
 import BackBlue from '../../assets/icons/back-blue.svg';
-import routes from '../../routes/routes.js';
+import routes from '@routes';
 
 const AppBarContainer = styled.div`
   padding: 16px 24px;

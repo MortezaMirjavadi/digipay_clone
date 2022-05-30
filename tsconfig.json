@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "baseUrl": "./",
+        "paths": {
+            "@components": ["./src/components"],
+            "@screens": ["./src/screens"],
+            "@routes": ["./src/routes/routes.ts"],
+            "@assets": ["./src/assets"],
+        },
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "jsx": "react",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": false,
+        "declaration": false,
+        "sourceMap": true,
+        "removeComments": true,
+        "module": "esnext"
+    },
+    "include": [
+        "src", "src/types/svg.d.ts"
+    ],
+    "exclude": ["node_modules", "**/*.spec.ts"],
+    "compileOnSave": false
+}
